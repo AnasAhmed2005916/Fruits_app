@@ -1,17 +1,81 @@
-# firebase_course
+# Fruits App 🍎
 
-A new Flutter project.
+A modern Flutter e-commerce application for browsing and exploring fresh fruits with a clean and user-friendly interface.
 
-## Getting Started
+## ✨ Features
 
-This project is a starting point for a Flutter application.
+* Splash Screen
+* Onboarding Screens
+* Clean and responsive UI
+* Reusable custom widgets
+* Navigation between application screens
+* Arabic font support using Cairo
+* Organized and scalable project structure
 
-A few resources to get you started if this is your first Flutter project:
+## 🛠️ Technologies
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+* Flutter
+* Dart
+* Material Design
+* SVG Assets
+* Custom Fonts
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 📱 Project Status
+
+The project is currently under development.
+
+### Completed
+
+* Splash Screen
+* Onboarding Flow
+* Initial project structure
+* Custom reusable widgets
+
+### Coming Soon
+
+* Authentication
+* Home Screen
+* Products
+* Product Details
+* Search & Filtering
+* Shopping Cart
+* User Profile
+* Firebase Integration
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+Make sure you have Flutter installed on your machine.
+
+### Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/AnasAhmed2005916/Fruits_app.git
+```
+
+2. Navigate to the project directory:
+
+```bash
+cd Fruits_app
+```
+
+3. Get the dependencies:
+
+```bash
+flutter pub get
+```
+
+4. Run the application:
+
+```bash
+flutter run
+```
+
+## 👨‍💻 Author
+
+**Anas Ahmed**
+
+Flutter Developer
