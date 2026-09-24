@@ -1,4 +1,5 @@
 import 'package:firebase_course/core/utils/app_colors.dart';
+import 'package:firebase_course/core/utils/app_text_styles.dart';
 import 'package:flutter/material.dart';
 
 class CustomButton extends StatelessWidget {
@@ -16,7 +17,7 @@ class CustomButton extends StatelessWidget {
         onPressed: onPressed,
         child: Text(
           text,
-          style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
+          style: AppTextStyles.font16Bold.copyWith(color: Colors.white),
         ),
       ),
     );
