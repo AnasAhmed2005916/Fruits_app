@@ -4,8 +4,8 @@ import 'package:firebase_course/features/auth/presentation/views/sign_up_view.da
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
-class DontHaveAccount extends StatelessWidget {
-  const DontHaveAccount({super.key});
+class HaveAccount extends StatelessWidget {
+  const HaveAccount({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +13,7 @@ class DontHaveAccount extends StatelessWidget {
       TextSpan(
         children: [
           TextSpan(
-            text: 'لا تمتلك حساب ؟ ',
+            text: 'تمتلك حساب بالفعل؟',
             style: AppTextStyles.font16Bold.copyWith(
               color: const Color(0xFF616A6B),
             ),
@@ -22,9 +22,9 @@ class DontHaveAccount extends StatelessWidget {
           TextSpan(
             recognizer: TapGestureRecognizer()
               ..onTap = () {
-                Navigator.pushNamed(context, SignUpView.routeName);
+                Navigator.pop(context);
               },
-            text: 'قم بإنشاء حساب',
+            text: 'تسجيل الدخول',
             style: AppTextStyles.font16Bold.copyWith(
               color: AppColors.primaryColor,
             ),
