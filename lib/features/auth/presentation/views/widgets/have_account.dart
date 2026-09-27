@@ -1,6 +1,5 @@
 import 'package:firebase_course/core/utils/app_colors.dart';
 import 'package:firebase_course/core/utils/app_text_styles.dart';
-import 'package:firebase_course/features/auth/presentation/views/sign_up_view.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
