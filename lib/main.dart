@@ -1,6 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_course/core/helper_functions/on_generate_route.dart';
+import 'package:firebase_course/core/services/get_it_service.dart';
 import 'package:firebase_course/core/services/shared_preferences_singleton.dart';
 import 'package:firebase_course/core/utils/app_colors.dart';
 import 'package:firebase_course/features/splash/presentation/views/splash_view.dart';
@@ -17,6 +18,7 @@ void main() async {
 
   await SharedPreferencesSingleton.instance.init();
   await EasyLocalization.ensureInitialized();
+  setupGetIt();
 
   runApp(
     EasyLocalization(
@@ -57,6 +59,6 @@ class FruitHub extends StatelessWidget {
   }
 }
 /**
- * هبدأ فى فيديو 49 
+ * هبدأ فى فيديو 52 
  * 
  */

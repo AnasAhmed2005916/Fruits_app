@@ -6,7 +6,6 @@ import 'package:firebase_course/features/on_boarding/data/onboarding_data.dart';
 import 'package:firebase_course/features/on_boarding/presentation/widgets/custom_dots_indicator.dart';
 import 'package:firebase_course/features/on_boarding/presentation/widgets/page_view_item.dart';
 import 'package:flutter/material.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 class OnBoardingViewBody extends StatefulWidget {
   OnBoardingViewBody({super.key});
