@@ -1,6 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_course/core/helper_functions/on_generate_route.dart';
+import 'package:firebase_course/core/services/custom_bloc_observer.dart';
 import 'package:firebase_course/core/services/get_it_service.dart';
 import 'package:firebase_course/core/services/shared_preferences_singleton.dart';
 import 'package:firebase_course/core/utils/app_colors.dart';
@@ -9,10 +10,12 @@ import 'package:firebase_course/firebase_options.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:device_preview/device_preview.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  Bloc.observer = CustomBlocObserver();
 
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
 
@@ -59,6 +62,6 @@ class FruitHub extends StatelessWidget {
   }
 }
 /**
- * هبدأ فى فيديو 52 
+ * هبدأ فى فيديو 55 
  * 
  */
