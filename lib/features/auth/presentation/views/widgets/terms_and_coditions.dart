@@ -4,28 +4,19 @@ import 'package:firebase_course/core/utils/app_text_styles.dart';
 import 'package:firebase_course/features/auth/presentation/views/widgets/custom_check_box.dart';
 import 'package:flutter/material.dart';
 
-class TermsAndCoditions extends StatefulWidget {
-  const TermsAndCoditions({super.key});
-
-  @override
-  State<TermsAndCoditions> createState() => _TermsAndCoditionsState();
-}
-
-class _TermsAndCoditionsState extends State<TermsAndCoditions> {
-  bool isChecked = false;
-
+class TermsAndCoditions extends StatelessWidget {
+  const TermsAndCoditions({
+    super.key,
+    required this.isChecked,
+    required this.onChanged,
+  });
+  final bool isChecked;
+  final VoidCallback onChanged;
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
-        CustomCheckBox(
-          isChecked: isChecked,
-          onTap: () {
-            setState(() {
-              isChecked = !isChecked;
-            });
-          },
-        ),
+        CustomCheckBox(isChecked: isChecked, onTap: onChanged),
         const SizedBox(width: 16),
         SizedBox(
           width:
