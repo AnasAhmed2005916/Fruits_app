@@ -4,7 +4,7 @@ import 'package:firebase_course/core/utils/app_text_styles.dart';
 import 'package:firebase_course/core/widgets/custom_button.dart';
 import 'package:firebase_course/core/widgets/custom_text_form_field.dart';
 import 'package:firebase_course/core/widgets/password_field.dart';
-import 'package:firebase_course/features/auth/presentation/manager/login_cubit/login_cubit.dart';
+import 'package:firebase_course/features/auth/presentation/manager/sign_in_cubit/sign_in_cubit.dart';
 import 'package:firebase_course/features/auth/presentation/views/widgets/dont_have_account.dart';
 import 'package:firebase_course/features/auth/presentation/views/widgets/or_divider.dart';
 import 'package:firebase_course/features/auth/presentation/views/widgets/social_login_button.dart';
@@ -12,14 +12,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class LoginViewBody extends StatefulWidget {
-  const LoginViewBody({super.key});
+class SigninViewBody extends StatefulWidget {
+  const SigninViewBody({super.key});
 
   @override
-  State<LoginViewBody> createState() => _LoginViewBodyState();
+  State<SigninViewBody> createState() => _SigninViewBodyState();
 }
 
-class _LoginViewBodyState extends State<LoginViewBody> {
+class _SigninViewBodyState extends State<SigninViewBody> {
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
 
   late String email;
@@ -72,7 +72,7 @@ class _LoginViewBodyState extends State<LoginViewBody> {
                   if (formKey.currentState!.validate()) {
                     formKey.currentState!.save();
 
-                    context.read<LoginCubit>().signInWithEmailAndPassword(
+                    context.read<SignInCubit>().signInWithEmailAndPassword(
                       email,
                       password,
                     );
@@ -105,7 +105,9 @@ class _LoginViewBodyState extends State<LoginViewBody> {
 
               SocialLoginButton(
                 title: 'تسجيل بواسطة جوجل',
-                onPressed: () {},
+                onPressed: () {
+                  context.read<SignInCubit>().signInWithGoogle();
+                },
                 icon: const FaIcon(
                   FontAwesomeIcons.google,
                   color: Colors.red,

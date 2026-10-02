@@ -1,4 +1,4 @@
-import 'package:firebase_course/features/auth/presentation/views/login_view.dart';
+import 'package:firebase_course/features/auth/presentation/views/sign_in_view.dart';
 import 'package:firebase_course/features/auth/presentation/views/sign_up_view.dart';
 import 'package:firebase_course/features/on_boarding/presentation/views/on_boarding_view.dart';
 import 'package:firebase_course/features/splash/presentation/views/splash_view.dart';
@@ -10,8 +10,8 @@ Route<dynamic> onGenerateRoute(RouteSettings settings) {
       return MaterialPageRoute(builder: (context) => const SplashView());
     case OnBoardingView.routeName:
       return MaterialPageRoute(builder: (context) => const OnBoardingView());
-    case LoginView.routeName:
-      return MaterialPageRoute(builder: (context) => const LoginView());
+    case SigninView.routeName:
+      return MaterialPageRoute(builder: (context) => const SigninView());
     case SignUpView.routeName:
       return MaterialPageRoute(builder: (context) => const SignUpView());
 
